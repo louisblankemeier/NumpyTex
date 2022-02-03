@@ -1,0 +1,18 @@
+\documentclass[11pt]{article}
+\usepackage[table]{xcolor}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\newcommand\headercell[1]{
+	\smash[b]{\begin{tabular}[t]{@{}c@{}} #1 \end{tabular}}}
+\begin{document}
+\noindent
+\begin{tabular}{@{} *{4}{c} @{}}
+\headercell{Trained \\ With} & \multicolumn{3}{c@{}}{Relative Performance On}\\
+\cmidrule(l){2-4}
+ & HTN & DM & OP \\ 
+ \midrule
+	HTN& \cellcolor{green!60.0} 0.6& \cellcolor{red!20.0} -0.2& \cellcolor{green!10.0} 0.1\\
+	DM& \cellcolor{green!40.0} 0.4& \cellcolor{red!50.0} -0.5& \cellcolor{red!90.0} -0.9\\
+	OP& \cellcolor{green!60.0} 0.6& \cellcolor{green!90.0} 0.9& \cellcolor{red!20.0} -0.2\\
+\end{tabular}
+\end{document}
