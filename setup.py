@@ -8,5 +8,6 @@ setup(
     author='Louis Blankemeier',
     author_email='lblankem@stanford.edu',
     install_requires=['numpy'],
+    include_package_data=True,
     packages=find_packages(),
 )
