@@ -15,7 +15,7 @@ To install using pip, use the command:
 
 `pip install git+https://github.com/louisblankemeier/NumpyTex`
 
-Then, you can import within your python. For example:
+Then, you can import within python. For example:
 
 `from NumpyTex import two_axis_table`
 
