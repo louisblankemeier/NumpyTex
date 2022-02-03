@@ -1,4 +1,5 @@
 import numpy as np
+import os
 
 def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_axis_label, vals, row_average = True, col_average = True, color = True, percent = True, decimals = 2):
     assert len(col_labels) == vals.shape[1], "length of column labels doesn't match vals axis 1 shape"
@@ -27,7 +28,10 @@ def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_a
         to_write += f"\\begin{{tabular}}{{@{{}} *{{{num_col_labels}}}{{c}} | c @{{}}}}\n\\headercell{{{first_part} \\\\ {second_part}}} & \multicolumn{{{num_col_labels}}}{{c@{{}}}}{{{col_axis_label}}}\\\\\n\\cmidrule(l){{2-{num_col_labels + 1}}}\n"
     else:
         to_write += f"\\begin{{tabular}}{{@{{}} *{{{num_col_labels + 1}}}{{c}} @{{}}}}\n\\headercell{{{first_part} \\\\ {second_part}}} & \multicolumn{{{num_col_labels}}}{{c@{{}}}}{{{col_axis_label}}}\\\\\n\\cmidrule(l){{2-{num_col_labels + 1}}}\n"
-    latex_script = open(f"../latex_scripts/{table_name}.tex","w")
+    
+    if not os.path.isdir('./latex_scripts'):
+        os.mkdir('./latex_scripts')
+    latex_script = open(f"./latex_scripts/{table_name}.tex","w")
     
     # Column labels
     for col_label in col_labels:
