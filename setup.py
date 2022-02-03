@@ -8,5 +8,5 @@ setup(
     author='Louis Blankemeier',
     author_email='lblankem@stanford.edu',
     install_requires=['numpy'],
-    packages=find_packages(include=['NumpyTex', 'NumpyTex/src/*']),
+    packages=find_packages(),
 )
