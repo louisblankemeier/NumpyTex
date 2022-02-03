@@ -6,7 +6,7 @@ numpy_to_latex_table/examples/two_axis_colored.py demostrates usage of the funct
 
 Below is an image of the rendered table using the generated latex script, which is written to numpy_to_latex_table/latex_scripts/two_axis_example.tex.
 
-![](http://url/to/img.png)
+![](https://github.com/louisblankemeier/numpy_to_latex_table/blob/main/figs/two_axis_table_example.png)
 
 
 
