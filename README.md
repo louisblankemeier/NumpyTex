@@ -13,7 +13,7 @@
 
 To install using pip, use the command:
 
-`pip install git+https://github.com/louisblankemeier/numpy-tex`
+`pip install git+https://github.com/louisblankemeier/NumpyTex`
 
 *Generated latex scripts have only been tested in Overleaf.*
 
