@@ -6,6 +6,6 @@ setup(
     description='Generates latex table scripts using a numpy array as input',
     url='https://github.com/shuds13/pyexample',
     author='Louis Blankemeier',
-    author_email='lblankem@stanford.edu,
+    author_email='lblankem@stanford.edu',
     install_requires=['numpy'],
 )
