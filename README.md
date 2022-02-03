@@ -1,5 +1,7 @@
 # Numpy To Latex Table Script Generator
 
+## Functionality
+
 ## Installation
 
 ### pip
