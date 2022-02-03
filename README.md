@@ -2,6 +2,10 @@
 
 ## Functionality
 
+- Can compute and add both row and column averages
+- Places a dash wherever a nan appears in the numpy table
+- Can add green color to indicate positive value, red color to indicate negative value
+
 ## Installation
 
 ### pip
