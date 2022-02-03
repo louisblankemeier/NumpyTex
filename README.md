@@ -5,6 +5,7 @@
 - Can compute and add both row and column averages
 - Places a dash wherever a nan appears in the numpy table
 - Can add green color to indicate positive value, red color to indicate negative value
+- If values are percentages, can add percent signs
 
 ## Installation
 
@@ -13,6 +14,8 @@
 To install using pip, use the command:
 
 `pip install git+https://github.com/louisblankemeier/numpy-tex`
+
+* Warning: generated latex scripts have only been tested in Overleaf *
 
 ## Usage
 
