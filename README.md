@@ -1,5 +1,15 @@
 # Numpy To Latex Table Script Generator
 
+## Installation
+
+### pip
+
+To install using pip, use the command:
+
+`pip install git+https://github.com/louisblankemeier/numpy_to_latex_table`
+
+## Usage
+
 This repo enables generating an aesthetically appealing table in the form of a latex script using a numpy array. 
 
 numpy_to_latex_table/examples/two_axis_colored.py demostrates usage of the function numpy_to_latex_table/src/two_axis_table.py. 
