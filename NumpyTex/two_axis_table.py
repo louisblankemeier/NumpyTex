@@ -48,7 +48,7 @@ def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_a
             if np.isnan(vals[i, j]):
                 to_write += f" & -"
             else:
-                if color_vals:
+                if color_vals is not None:
                     if color_vals[i, j] < 0:
                         if percent:
                             to_write += f"& \\cellcolor{{red!{np.abs(color_vals[i, j])}}} {vals[i, j]:.{decimals}f}\%"
@@ -66,7 +66,7 @@ def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_a
                         to_write += f" & {vals[i, j]:.{decimals}f}"
 
         if row_average:
-            if color_vals:
+            if color_vals is not None:
                 if row_averages[i] < 0:
                     if percent:
                         to_write += f"& \\cellcolor{{red!{np.abs(row_averages[i])}}} {row_averages[i]:.{decimals}f}\%"
@@ -88,7 +88,7 @@ def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_a
     if col_average:
         to_write += f"\n\t \\hline \n\t average"
         for i in range(len(col_labels)):
-            if color_vals:
+            if color_vals is not None:
                 if col_averages[i] < 0:
                     if percent:
                         to_write += f"& \\cellcolor{{red!{np.abs(col_averages[i])}}} {col_averages[i]:.{decimals}f}\%"
