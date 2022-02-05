@@ -17,7 +17,7 @@ To install using pip, use the command:
 
 Then, you can import within python. For example:
 
-`from NumpyTex import two_axis_table`
+`from NumpyTex.two_axis_table import gen_two_axis_table`
 
 *Generated latex scripts have only been tested in Overleaf.*
 
