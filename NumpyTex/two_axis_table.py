@@ -29,9 +29,9 @@ def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_a
     else:
         to_write += f"\\begin{{tabular}}{{@{{}} *{{{num_col_labels + 1}}}{{c}} @{{}}}}\n\\headercell{{{first_part} \\\\ {second_part}}} & \multicolumn{{{num_col_labels}}}{{c@{{}}}}{{{col_axis_label}}}\\\\\n\\cmidrule(l){{2-{num_col_labels + 1}}}\n"
     
-    if not os.path.isdir('./latex_scripts'):
-        os.mkdir('./latex_scripts')
-    latex_script = open(f"./latex_scripts/{table_name}.tex","w")
+    #if not os.path.isdir('./latex_scripts'):
+    #    os.mkdir('./latex_scripts')
+    #latex_script = open(f"./latex_scripts/{table_name}.tex","w")
     
     # Column labels
     for col_label in col_labels:
@@ -112,5 +112,7 @@ def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_a
 
     # Latex end statements
     to_write += f"\n\\end{{tabular}}\n\\end{{document}}"
-    latex_script.write(to_write)
-    latex_script.close()
+    #latex_script.write(to_write)
+
+    print(to_write)
+    #latex_script.close()
