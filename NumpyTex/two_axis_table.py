@@ -1,7 +1,7 @@
 import numpy as np
 import os
 
-def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_axis_label, vals, row_average = True, col_average = True, color_vals = None , uncertainties = None, percent = True, decimals = 2):
+def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_axis_label, vals, row_average = True, col_average = True, color_vals = None , uncertainties = None, pvalues = None, percent = True, decimals = 2):
     assert len(col_labels) == vals.shape[1], "length of column labels doesn't match vals axis 1 shape"
     assert len(row_labels) == vals.shape[0], "length of column labels doesn't match vals axis 0 shape"
     
@@ -65,7 +65,11 @@ def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_a
                     else:
                         to_write += f" & {vals[i, j]:.{decimals}f}"
                 if uncertainties is not None:
-                    to_write += f" ± {uncertainties[i, j]:.{decimals}f}"
+                    if not np.isnan(uncertainties[i, j]):
+                        to_write += f" ± {uncertainties[i, j]:.{decimals + 1}f}"
+                if pvalues is not None:
+                    if not np.isnan(pvalues[i, j]):
+                        to_write += f" (p = {pvalues[i, j]:.{decimals + 1}f})"
 
         if row_average:
             if color_vals is not None:
