@@ -69,7 +69,7 @@ def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_a
                         to_write += f" ± {uncertainties[i, j]:.{decimals + 1}f}"
                 if pvalues is not None:
                     if not np.isnan(pvalues[i, j]):
-                        to_write += f" (p = {pvalues[i, j]:.{decimals + 1}f})"
+                        to_write += f" (p = {pvalues[i, j]:.2E})"
 
         if row_average:
             if color_vals is not None:
