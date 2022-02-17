@@ -65,7 +65,7 @@ def gen_two_axis_table(table_name, col_labels, row_labels, col_axis_label, row_a
                     else:
                         to_write += f" & {vals[i, j]:.{decimals}f}"
                 if uncertainties is not None:
-                    to_write += f" ± {uncertainties[i, j]}"
+                    to_write += f" ± {uncertainties[i, j]:.{decimals}f}"
 
         if row_average:
             if color_vals is not None:
